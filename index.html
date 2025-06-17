@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nayan Hossain</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid orange;
+      max-width: 90vw;
+      animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px #00d4ff;
+      margin-bottom: 20px;
+      border: 3px solid #ffffff33;
+    }
+
+    .new-info {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      border-left: 5px solid #00d4ff;
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-row strong {
+      color: #00d4ff;
+    }
+
+    .info-row a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .info-row a:hover {
+      text-decoration: underline;
+      color: #00d4ff;
+    }
+
+    .scroll-btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: #00d4ff;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 20px #00d4ff;
+      transition: 0.4s;
+    }
+
+    .scroll-btn:hover {
+      background: #fff;
+      color: #2c5364;
+      box-shadow: 0 0 30px #00d4ff;
+      transform: scale(1.05);
+    }
+
+    .projects {
+      background-color: rgba(255,255,255,0.05);
+      padding: 50px 20px;
+      text-align: center;
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .projects.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .project-item {
+      margin: 15px auto;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .personal-lines {
+      margin-top: 20px;
+      text-align: center;
+      color: #feffff;
+    }
+
+    .personal-lines p {
+      margin: 10px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appearLine 1s forwards;
+    }
+
+    .personal-lines p:nth-child(1) { animation-delay: 0.5s; }
+    .personal-lines p:nth-child(2) { animation-delay: 1s; }
+    .personal-lines p:nth-child(3) { animation-delay: 1.5s; }
+    .personal-lines p:nth-child(4) { animation-delay: 2s; }
+    .personal-lines p:nth-child(5) { animation-delay: 2.5s; }
+
+    @keyframes appearLine {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      .scroll-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .new-info {
+        padding: 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="animatedText"></h1>
+    <img class="profile-img" src="mmm.jpg" alt="Nayan Hossain">
+
+    <div class="new-info">
+      <div class="info-row"><div class="icon">👤</div><div><strong>Name:</strong> Nayan Hossain</div></div>
+      <div class="info-row"><div class="icon">📧</div><div><strong>Email:</strong> <a href="mailto:nayanhossain735@gmail.com">nayanhossain735@gmail.com</a></div></div>
+      <div class="info-row"><div class="icon">📞</div><div><strong>Phone:</strong> <a href="tel:01733875019">01733875019</a></div></div>
+      <div class="info-row"><div class="icon">🔗</div><div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammad-nayan-270530363/" target="_blank">Visit Profile</a></div></div>
+      <div class="info-row"><div class="icon">💼</div><div><strong>Upwork:</strong> <a href="https://www.upwork.com/freelancers/~017d706bb6e76bc408" target="_blank">View Profile</a></div></div>
+    </div>
+
+    <div class="personal-lines" id="personalLines">
+      <p>Skilled in HTML, CSS, and JavaScript.</p>
+      <p>Active on Linkding – organizing the web smartly.</p>
+      <p>Available on Upwork for freelance projects.</p>
+      <p>Creative Web Designer & Professional Developer.</p>
+      <p>Passionate freelancer building digital dreams.</p>
+    </div>
+
+    <button class="scroll-btn" onclick="showProjects()">View Projects</button>
+  </div>
+
+  <div id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-item"><h3>Restaurant Website</h3><p>A modern food ordering site with gallery and admin panel.</p></div>
+    <div class="project-item"><h3>Personal Portfolio</h3><p>Stylish one-page design with animations and effects.</p></div>
+    <div class="project-item"><h3>Business Landing Page</h3><p>Professional product landing page built with HTML, CSS & JS.</p></div>
+  </div>
+
+  <script>
+    const text = "Welcome to Nayan Hossain Portfolio";
+    let index = 0;
+    const speed = 100;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("animatedText").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      } else {
+        setTimeout(() => {
+          document.getElementById("animatedText").innerHTML = "";
+          index = 0;
+          typeWriter();
+        }, 3000);
+      }
+    }
+    window.onload = function() {
+      typeWriter();
+    }
+    function showProjects() {
+      const projects = document.getElementById("projects");
+      projects.classList.add("show");
+      projects.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
